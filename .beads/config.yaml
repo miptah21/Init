@@ -1,0 +1,4 @@
+repos:
+  primary: "."
+  additional:
+    - "C:\\Users\\mifta\\.beads-planning"
