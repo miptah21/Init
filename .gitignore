@@ -41,9 +41,7 @@ __pycache__/
 venv/
 
 # Beads / Dolt (if using beads issue tracking)
-.dolt/
-*.db
-.beads-credential-key
+.beads
 
 # Temp
 tmp/
