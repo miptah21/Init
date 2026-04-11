@@ -49,7 +49,7 @@ description: Pre-deployment checklist workflow. Use before deploying to staging 
 7. **Check database migrations** — If applicable:
    ```bash
    # Ensure migrations are up to date
-   npx prisma migrate status   # or equivalent
+   bunx prisma migrate status   # or equivalent
    ```
 
 8. **Bundle size check** — If applicable:

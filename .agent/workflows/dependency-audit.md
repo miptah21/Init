@@ -22,12 +22,12 @@ description: Dependency audit workflow. Use when checking project dependencies f
 
 4. **License check** (if `license-checker` available):
    ```bash
-   npx license-checker --summary
+   bunx license-checker --summary
    ```
 
 5. **Find unused dependencies** (if `depcheck` available):
    ```bash
-   npx depcheck
+   bunx depcheck
    ```
 
 6. **Bundle size impact** of largest dependencies:

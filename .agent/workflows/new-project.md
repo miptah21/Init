@@ -25,8 +25,9 @@ description: New project setup workflow. Use when starting a fresh project from 
    - Environment variables
    - Architecture overview
 
-4. **Setup environment**:
+4. **Setup environment** (if applicable):
    ```bash
+   # Create .env.example with your project's required variables, then:
    cp .env.example .env.local
    ```
 
@@ -49,14 +50,23 @@ description: New project setup workflow. Use when starting a fresh project from 
 
 8. **Remove unused skills** — Keep only skills relevant to your project type.
 
-9. **Initial commit**:
+9. **Cross-tool compatibility** (optional) — Create symlinks for other AI tools:
    ```bash
-   git add .
-   git commit -m "init: project setup from Project Init template"
+   # Linux/macOS
+   ln -s AGENTS.md CLAUDE.md
+   # Windows (Git Bash)
+   cp AGENTS.md CLAUDE.md
    ```
 
-10. **Connect remote**:
+10. **Initial commit**:
+    ```bash
+    git add .
+    git commit -m "init: project setup from Project Init template"
+    ```
+
+11. **Connect remote**:
     ```bash
     git remote add origin <your-repo-url>
     git push -u origin main
     ```
+

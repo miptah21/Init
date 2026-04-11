@@ -1,31 +1,37 @@
 # Project Init
 
-> Standardized development template for AI-assisted product development.
+[![AGENTS.md](https://img.shields.io/badge/AGENTS.md-standard-blue)](https://agents.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+> Development template for AI-assisted TypeScript/JavaScript projects.
 > Optimized for **Antigravity** (Google DeepMind), compatible with other AI coding assistants.
 
 ---
 
 ## What is this?
 
-Project Init is a curated collection of instructions, skills, workflows, and conventions that make AI coding agents significantly more effective. Instead of starting every project from scratch, copy this template to get:
+Project Init is a curated collection of instructions, skills, workflows, and conventions that make AI coding agents significantly more effective. It follows the [AGENTS.md](https://agents.md) open standard (Linux Foundation). Copy this template to get:
 
-- ✅ **Agent instructions** (`AGENTS.md`) — How the AI should behave, code, and communicate
-- ✅ **8 production skills** — PR review, security audit, dependency check, performance profiling, CI/CD, tech debt, web design, react
-- ✅ **9 workflows** — Step-by-step procedures for common tasks
-- ✅ **Convention docs** — TypeScript, testing, React, and comment standards
+- ✅ **Agent instructions** (`AGENTS.md`) — Slim, focused behavioral rules (~170 lines)
+- ✅ **9 skills** — PR review, security audit, dependency check, performance profiling, CI/CD, tech debt, web design, React hooks, git workflow
+- ✅ **10 workflows** — Step-by-step procedures including self-reflection
+- ✅ **Convention docs** — TypeScript, testing, React/Next.js, comments, implementation protocol, communication style
+
+### Stack Focus
+
+This template is optimized for **TypeScript/JavaScript** projects using **Bun** as the runtime. For other stacks (Python, Go, Rust):
+- Remove JS-specific convention docs from `docs/`
+- Remove React-specific skills if not applicable
+- Add your own convention docs
 
 ## Quick Start
 
 ### 1. Copy to your new project
 
 ```bash
-# Clone this template
 git clone <this-repo-url> my-new-project
 cd my-new-project
-
-# Remove the template git history
-rm -rf .git
-git init
+rm -rf .git && git init
 ```
 
 ### 2. Customize AGENTS.md
@@ -35,28 +41,47 @@ Edit `AGENTS.md` to add project-specific context:
 - Architecture overview
 - Project-specific conventions
 
-### 3. Start coding with AI
+### 3. Install dependencies
 
-The agent will automatically read `AGENTS.md` and follow the established patterns.
+```bash
+bun install
+```
+
+### 4. Remove what you don't need
+
+- Not using React? Remove `docs/react-best-practices.md` and `.agent/skills/react-useeffect/`
+- Not using TypeScript? Remove `docs/typescript-conventions.md`
+- See `/new-project` workflow for the full setup checklist
+
+### 5. Start coding with AI
+
+The agent reads `AGENTS.md` automatically and follows established patterns.
 
 ## Structure
 
 ```
 .
-├── AGENTS.md                          # 🧠 Master instructions for AI agents
+├── AGENTS.md                          # 🧠 Agent behavioral rules (~170 lines)
 ├── README.md                          # This file
+├── CHANGELOG.md                       # Version history
+├── LICENSE                            # MIT license
+├── package.json                       # Template package config
+├── tsconfig.json                      # TypeScript configuration
+├── .editorconfig                      # Editor formatting consistency
+├── .gitattributes                     # Line ending normalization
 ├── .gitignore                         # Git ignore rules
 │
 ├── .agent/
-│   ├── skills/                        # 🛠️ Specialized AI skills
+│   ├── skills/                        # 🛠️ Structured prompt templates
 │   │   ├── pr-review-expert/          # PR review with blast radius analysis
 │   │   ├── security-auditor/          # Security vulnerability scanning
 │   │   ├── dependency-auditor/        # Dependency health & license check
 │   │   ├── performance-profiler/      # Performance bottleneck detection
 │   │   ├── ci-cd-pipeline-builder/    # CI/CD pipeline generation
 │   │   ├── tech-debt-tracker/         # Tech debt scoring & tracking
-│   │   ├── web-design-guidelines/     # UI/UX and web design review
-│   │   └── react-useeffect/           # React hooks best practices
+│   │   ├── web-design-guidelines/     # UI/UX review (vendored guidelines)
+│   │   ├── react-useeffect/           # React hooks best practices
+│   │   └── git-workflow/              # Commit, branch, PR conventions
 │   │
 │   └── workflows/                     # 📋 Step-by-step procedures
 │       ├── code-review.md             # Code review workflow
@@ -67,54 +92,62 @@ The agent will automatically read `AGENTS.md` and follow the established pattern
 │       ├── oss-research.md            # Open-source library research
 │       ├── planning.md                # Multi-step task planning
 │       ├── prd.md                     # Product requirements drafting
+│       ├── reflect.md                 # Self-reflection & improvement
 │       └── tech-docs.md               # Technical documentation writing
 │
-└── docs/                              # 📖 Convention documentation
+└── docs/                              # 📖 On-demand convention docs
     ├── typescript-conventions.md       # TypeScript standards
     ├── testing-conventions.md          # Testing patterns
-    ├── react-best-practices.md        # React/Next.js optimization (45 rules)
-    └── comment-policy.md              # Comment standards
+    ├── react-best-practices.md        # React/Next.js optimization
+    ├── comment-policy.md              # Comment standards
+    ├── implementation-protocol.md     # Delegation, verification, recovery
+    └── communication-style.md         # Agent communication rules
 ```
 
 ## Skills
 
-Each skill in `.agent/skills/` has a `SKILL.md` that the AI reads automatically when relevant. Available skills:
-
 | Skill | What it does |
 |-------|-------------|
-| **pr-review-expert** | 30+ item checklist, blast radius analysis, security scan, test coverage delta |
-| **security-auditor** | Code execution risks, prompt injection, supply chain, file system abuse |
-| **dependency-auditor** | CVE scanning, license compliance, upgrade planning, bloat analysis |
-| **performance-profiler** | CPU/memory profiling, bundle analysis, N+1 detection, load testing |
+| **pr-review-expert** | 30+ item checklist, blast radius analysis, security scan |
+| **security-auditor** | Code execution risks, prompt injection, supply chain |
+| **dependency-auditor** | CVE scanning, license compliance, upgrade planning |
+| **performance-profiler** | CPU/memory profiling, bundle analysis, N+1 detection |
 | **ci-cd-pipeline-builder** | Stack detection → GitHub Actions/GitLab CI generation |
 | **tech-debt-tracker** | Debt scanning, scoring, prioritization, trend tracking |
-| **web-design-guidelines** | Fetch and apply modern web semantic and aesthetic rules |
-| **react-useeffect** | React hooks anti-patterns detection and state synchronization fixes |
+| **web-design-guidelines** | Vendored Vercel guidelines + 10-point review checklist |
+| **react-useeffect** | React hooks anti-patterns and state sync fixes |
+| **git-workflow** | Conventional commits, branch naming, PR templates |
 
 ## Workflows
 
-Trigger workflows by referencing them:
-
 | Workflow | Trigger |
 |----------|---------|
-| Code Review | "do a code review" or `/code-review` |
-| Dependency Audit | "audit dependencies" or `/dependency-audit` |
-| Deploy Check | "pre-deploy check" or `/deploy-check` |
-| Interview | "interview me" or `/interview` |
-| New Project | "setup a new project" or `/new-project` |
-| OSS Research | "research library" or `/oss-research` |
-| Planning | "create a plan" or `/planning` |
-| PRD | "write a PRD" or `/prd` |
-| Tech Docs | "write technical docs" or `/tech-docs` |
+| Code Review | `/code-review` or reviewing changes |
+| Dependency Audit | `/dependency-audit` or checking packages |
+| Deploy Check | `/deploy-check` or pushing to prod |
+| Interview | `/interview` or vague requirements |
+| New Project | `/new-project` or starting fresh |
+| OSS Research | `/oss-research` or evaluating libraries |
+| Planning | `/planning` or complex multi-step tasks |
+| PRD | `/prd` or writing feature specs |
+| Reflect | `/reflect` or end of major tasks |
+| Tech Docs | `/tech-docs` or writing documentation |
+
+## Design Principles
+
+1. **Progressive Disclosure** — Root AGENTS.md is <200 lines. Details in on-demand `docs/` files
+2. **Single Source of Truth** — Each convention lives in one file, referenced from AGENTS.md
+3. **Situational Triggers** — Skills and workflows fire based on activity patterns, not just commands
+4. **Self-Improving** — The `/reflect` workflow updates conventions based on real experience
+5. **Cross-Tool Compatible** — Follows [AGENTS.md](https://agents.md) standard (Linux Foundation/AAIF)
 
 ## Credits
 
-Resources adapted from:
+- [AGENTS.md Standard](https://agents.md) — Open format by AAIF/Linux Foundation
 - [jarrodwatts/claude-code-config](https://github.com/jarrodwatts/claude-code-config) — Rules, skills, agents
-- [mar_antaya](https://twitter.com/mar_antaya) — Production skills
 - [Manus Context Engineering](https://manus.im/blog/Context-Engineering-for-AI-Agents) — Planning principles
-- [steveyegge/beads](https://github.com/steveyegge/beads) — Issue tracking
+- [vercel-labs/web-interface-guidelines](https://github.com/vercel-labs/web-interface-guidelines) — UI guidelines
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE)

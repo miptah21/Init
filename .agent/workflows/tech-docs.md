@@ -1,3 +1,7 @@
+---
+description: Technical documentation writing workflow. Use when creating README files, API docs, architecture docs, or user guides.
+---
+
 # Technical Documentation Workflow
 
 > Use when creating README files, API docs, architecture docs, or user guides.

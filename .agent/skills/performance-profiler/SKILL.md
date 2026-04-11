@@ -71,8 +71,8 @@ node --prof app.js
 node --prof-process isolate-*.log > profile.txt
 
 # Using clinic.js
-npx clinic doctor -- node app.js
-npx clinic flame -- node app.js
+bunx clinic doctor -- node app.js
+bunx clinic flame -- node app.js
 ```
 
 ### Node.js Memory Profiling
@@ -93,10 +93,10 @@ node --max-old-space-size=512 --trace-gc app.js
 ANALYZE=true next build
 
 # Webpack
-npx webpack-bundle-analyzer stats.json
+bunx webpack-bundle-analyzer stats.json
 
 # Package size check
-npx bundlephobia-cli <package-name>
+bunx bundlephobia-cli <package-name>
 ```
 
 ### Database Query Analysis

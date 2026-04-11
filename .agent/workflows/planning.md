@@ -1,3 +1,7 @@
+---
+description: Context engineering workflow for complex multi-step tasks. Use when tasks involve 3+ steps, multiple tool calls, or risk of context drift.
+---
+
 # Planning Workflow — Context Engineering for Long Tasks
 
 > Use when tasks involve 3+ steps, multiple tool calls, or risk of context drift.

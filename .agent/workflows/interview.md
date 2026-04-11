@@ -1,3 +1,7 @@
+---
+description: Interactive user interviewing workflow. Use when requirements are vague, scope is unclear, or the user needs guided discovery.
+---
+
 # Interview Workflow
 
 > Use when requirements are vague, scope is unclear, or the user says "I want to build X" without specifics.

@@ -1,0 +1,14 @@
+{
+  "name": "my-project",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'Configure your linter (e.g., bun add -d eslint)'",
+    "test": "echo 'Configure your test runner (e.g., bun add -d vitest)'",
+    "build": "echo 'Configure your build (e.g., bun add -d tsup)'"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0"
+  }
+}

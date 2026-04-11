@@ -14,15 +14,18 @@ description: Fetch and apply modern web interface design guidelines to review UI
 
 ## Process
 
-### Step 1: Fetch Guidelines
+### Step 1: Read Guidelines
 
-Fetch the latest web interface guidelines:
+Read the vendored guidelines file:
 
 ```
-read_url_content: https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md
+view_file: .agent/skills/web-design-guidelines/guidelines.md
 ```
 
-If the URL is unavailable, use the embedded principles below as fallback.
+> **Note:** Guidelines vendored from [vercel-labs/web-interface-guidelines](https://github.com/vercel-labs/web-interface-guidelines). Last updated: 2026-04-11.
+> To update, re-fetch from `https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md`.
+
+If the file is missing, use the embedded principles below as fallback.
 
 ### Step 2: Review Code Against Principles
 

@@ -1,3 +1,7 @@
+---
+description: Open-source library research workflow. Use when researching libraries, finding implementation details, or evaluating packages.
+---
+
 # OSS Research Workflow
 
 > Use when researching open-source libraries, finding implementation details, or understanding how external packages work.

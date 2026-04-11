@@ -74,8 +74,8 @@ grype .
 
 ```bash
 # JavaScript - check licenses
-npx license-checker --summary
-npx license-checker --failOn "GPL-2.0;GPL-3.0;AGPL-3.0"
+bunx license-checker --summary
+bunx license-checker --failOn "GPL-2.0;GPL-3.0;AGPL-3.0"
 
 # Python
 pip-licenses --format=table
@@ -110,10 +110,10 @@ Check for:
 
 ```bash
 # JavaScript - find unused deps
-npx depcheck
+bunx depcheck
 
 # Bundle size impact
-npx bundlephobia-cli <package-name>
+bunx bundlephobia-cli <package-name>
 ```
 
 ### Step 5: Supply Chain Assessment

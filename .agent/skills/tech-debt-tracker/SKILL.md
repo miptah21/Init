@@ -59,7 +59,7 @@ find src/ -name "*.ts" -o -name "*.tsx" | xargs wc -l | sort -rn | head -20
 grep -c "function\|=>" src/**/*.ts | sort -t: -k2 -rn | head -20
 
 # Duplicated code (if jscpd available)
-npx jscpd src/ --min-lines 10 --min-tokens 50
+bunx jscpd src/ --min-lines 10 --min-tokens 50
 
 # Test coverage
 bun test -- --coverage 2>/dev/null | tail -5

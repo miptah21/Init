@@ -1,3 +1,7 @@
+---
+description: Product requirements document workflow. Use when planning features, starting new projects, or writing specs.
+---
+
 # PRD Workflow — Product Requirements Document
 
 > Use when planning a feature, starting a new project, or when asked to create a PRD.
