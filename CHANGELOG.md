@@ -4,10 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.2.0] - 2026-04-11
+
+### Added
+- **RTK token optimization** — Rules-based integration in AGENTS.md for [RTK](https://github.com/rtk-ai/rtk) (Rust Token Killer). Agent detects RTK at session start and prefixes eligible shell commands for 60-90% token savings. Graceful fallback when RTK is not installed.
+
 ## [1.1.0] - 2026-04-11
 
 ### Changed
-- **AGENTS.md rewritten** — 532→168 lines via progressive disclosure. Behavioral details moved to `docs/implementation-protocol.md` and `docs/communication-style.md`
+- **AGENTS.md rewritten** — Reduced to ~200 lines via progressive disclosure. Behavioral details moved to `docs/implementation-protocol.md` and `docs/communication-style.md`
 - **npm→bunx consistency** — All skills and workflows now use `bunx` exclusively
 - **Workflow frontmatter** — All 10 workflows have YAML frontmatter with descriptions
 - **Situational workflow triggers** — Workflows now fire based on activity patterns, not just slash commands

@@ -12,10 +12,11 @@
 
 Project Init is a curated collection of instructions, skills, workflows, and conventions that make AI coding agents significantly more effective. It follows the [AGENTS.md](https://agents.md) open standard (Linux Foundation). Copy this template to get:
 
-- ✅ **Agent instructions** (`AGENTS.md`) — Slim, focused behavioral rules (~170 lines)
+- ✅ **Agent instructions** (`AGENTS.md`) — Slim, focused behavioral rules (~200 lines)
 - ✅ **9 skills** — PR review, security audit, dependency check, performance profiling, CI/CD, tech debt, web design, React hooks, git workflow
 - ✅ **10 workflows** — Step-by-step procedures including self-reflection
 - ✅ **Convention docs** — TypeScript, testing, React/Next.js, comments, implementation protocol, communication style
+- ✅ **Token optimization** — [RTK](https://github.com/rtk-ai/rtk) integration rules for 60-90% token savings on shell outputs
 
 ### Stack Focus
 

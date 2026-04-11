@@ -8,9 +8,16 @@ description: New project setup workflow. Use when starting a fresh project from 
 
 1. **Clone the template** and remove template git history:
    ```bash
+   # Unix/macOS/Git Bash
    git clone <init-repo-url> my-project
    cd my-project
    rm -rf .git
+   git init
+
+   # Windows (PowerShell)
+   git clone <init-repo-url> my-project
+   cd my-project
+   Remove-Item -Recurse -Force .git
    git init
    ```
 
@@ -52,10 +59,11 @@ description: New project setup workflow. Use when starting a fresh project from 
 
 9. **Cross-tool compatibility** (optional) — Create symlinks for other AI tools:
    ```bash
-   # Linux/macOS
+   # Linux/macOS/Git Bash
    ln -s AGENTS.md CLAUDE.md
-   # Windows (Git Bash)
-   cp AGENTS.md CLAUDE.md
+   
+   # Windows (PowerShell)
+   New-Item -ItemType SymbolicLink -Path "CLAUDE.md" -Target "AGENTS.md"
    ```
 
 10. **Initial commit**:
