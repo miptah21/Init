@@ -27,8 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `CHANGELOG.md` — This file
 - `docs/implementation-protocol.md` — Delegation, verification, failure recovery
 - `docs/communication-style.md` — Agent communication rules
-- `.agent/skills/git-workflow/` — Commit conventions, branch naming, PR templates
-- `.agent/workflows/reflect.md` — Self-reflection and AGENTS.md auto-improvement
+- `.agents/skills/git-workflow/` — Commit conventions, branch naming, PR templates
+- `.agents/workflows/reflect.md` — Self-reflection and AGENTS.md auto-improvement
 
 ### Removed
 - `docs/react-best-practices-full.md` — 62KB vendored file (use condensed version instead)

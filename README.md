@@ -50,7 +50,7 @@ bun install
 
 ### 4. Remove what you don't need
 
-- Not using React? Remove `docs/react-best-practices.md` and `.agent/skills/react-useeffect/`
+- Not using React? Remove `docs/react-best-practices.md` and `.agents/skills/react-useeffect/`
 - Not using TypeScript? Remove `docs/typescript-conventions.md`
 - See `/new-project` workflow for the full setup checklist
 
@@ -72,7 +72,7 @@ The agent reads `AGENTS.md` automatically and follows established patterns.
 ├── .gitattributes                     # Line ending normalization
 ├── .gitignore                         # Git ignore rules
 │
-├── .agent/
+├── .agents/
 │   ├── skills/                        # 🛠️ Structured prompt templates
 │   │   ├── pr-review-expert/          # PR review with blast radius analysis
 │   │   ├── security-auditor/          # Security vulnerability scanning

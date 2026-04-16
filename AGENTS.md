@@ -52,16 +52,16 @@ Workflows are NOT just slash commands. **Detect these situations** during normal
 
 | Situation | Workflow | Read this file |
 |-----------|----------|----------------|
-| About to deploy, pushing to prod, release prep | Deploy Check | `.agent/workflows/deploy-check.md` |
-| Reviewing changes, checking PR, merging code | Code Review | `.agent/workflows/code-review.md` |
-| Task has 3+ steps, complex multi-file changes | Planning | `.agent/workflows/planning.md` |
-| User describes a feature vaguely, unclear scope | Interview | `.agent/workflows/interview.md` |
-| User wants a spec, feature plan, requirements | PRD | `.agent/workflows/prd.md` |
-| Starting a fresh project from this template | New Project | `.agent/workflows/new-project.md` |
-| Evaluating a library, "should we use X?" | OSS Research | `.agent/workflows/oss-research.md` |
-| Writing README, API docs, architecture docs | Tech Docs | `.agent/workflows/tech-docs.md` |
-| Checking dependencies, updating packages | Dependency Audit | `.agent/workflows/dependency-audit.md` |
-| End of major task, session reflection | Reflect | `.agent/workflows/reflect.md` |
+| About to deploy, pushing to prod, release prep | Deploy Check | `.agents/workflows/deploy-check.md` |
+| Reviewing changes, checking PR, merging code | Code Review | `.agents/workflows/code-review.md` |
+| Task has 3+ steps, complex multi-file changes | Planning | `.agents/workflows/planning.md` |
+| User describes a feature vaguely, unclear scope | Interview | `.agents/workflows/interview.md` |
+| User wants a spec, feature plan, requirements | PRD | `.agents/workflows/prd.md` |
+| Starting a fresh project from this template | New Project | `.agents/workflows/new-project.md` |
+| Evaluating a library, "should we use X?" | OSS Research | `.agents/workflows/oss-research.md` |
+| Writing README, API docs, architecture docs | Tech Docs | `.agents/workflows/tech-docs.md` |
+| Checking dependencies, updating packages | Dependency Audit | `.agents/workflows/dependency-audit.md` |
+| End of major task, session reflection | Reflect | `.agents/workflows/reflect.md` |
 
 **Rule:** If the user's task matches a workflow situation, **read the workflow file first** — even if the user didn't explicitly ask for it. The workflow provides structure that prevents mistakes.
 
