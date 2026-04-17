@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.2.1] - 2026-04-17
+
+### Fixed
+- **Lockfile Mismatch** — Renamed phantom `claude-md-improver` reference in `skills-lock.json` to properly match the existing `ag-md-improver` directory.
+- **Package Configuration** — Added missing `eslint` to `devDependencies` and updated `main` entry point to `src/index.ts`.
+- **Project Scaffolding** — Added `src/index.ts`, `tests/index.test.ts`, and `build.ts` to ensure `bun test` and `bun run build` work out of the box.
+
 ## [1.2.0] - 2026-04-11
 
 ### Added

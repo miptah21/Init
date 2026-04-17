@@ -39,7 +39,7 @@ Comprehensive dependency analysis covering security vulnerabilities, license com
 ```bash
 # JavaScript/Node.js
 # JavaScript/Node.js (prefer bun)
-bun audit
+rtk bun audit
 
 # Alternative: npm audit
 # npm audit --json > audit-results.json
@@ -74,8 +74,8 @@ grype .
 
 ```bash
 # JavaScript - check licenses
-bunx license-checker --summary
-bunx license-checker --failOn "GPL-2.0;GPL-3.0;AGPL-3.0"
+rtk bunx license-checker --summary
+rtk bunx license-checker --failOn "GPL-2.0;GPL-3.0;AGPL-3.0"
 
 # Python
 pip-licenses --format=table
@@ -86,8 +86,8 @@ pip-licenses --format=table
 ```bash
 # JavaScript
 # JavaScript (prefer bun)
-bun outdated
-bunx npm-check-updates
+rtk bun outdated
+rtk bunx npm-check-updates
 
 # Python
 pip list --outdated
@@ -110,10 +110,10 @@ Check for:
 
 ```bash
 # JavaScript - find unused deps
-bunx depcheck
+rtk bunx depcheck
 
 # Bundle size impact
-bunx bundlephobia-cli <package-name>
+rtk bunx bundlephobia-cli <package-name>
 ```
 
 ### Step 5: Supply Chain Assessment

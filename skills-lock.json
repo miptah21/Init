@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "skills": {
+    "SEO Optimizer": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "40f156d4e5f94c560128a46a5118170ad3515d7f12edbe80cfc461d9af46c606"
+    },
+    "agentic-eval": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "40771d7d389c1542e6cb995d75e516893466f01c3b66bc040b158ceb793d4bed"
+    },
+    "algorithmic-art": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "5c2804e8f0d4944c7ce6939a2e4afdcf0cb69c966a505481ed8b96e20bb32eee"
+    },
+    "canvas-design": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "e1bef835e7e6624d39a161e8d7da79bb4e55887871991f06e3efdb7fcc85f6af"
+    },
+    "chrome-devtools": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "85d9c4ef94e00ddfc937d50aab72a307e80b98bc7e6744ec6e239ef68819c2d7"
+    },
+    "ag-md-improver": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "d6707ed0467d9664d0f9d2c44724c8fb1814475ec6d3c62a5d54bbbe807e0775"
+    },
+    "clean-code": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "723e4955a7f12526cc4a182f085e41495bcbb8fae232e491e82e10926597624b"
+    },
+    "database-design": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "c441de2beac978d466fec3347600ea3a6415db28f19c4d7677c951cbc41f4686"
+    },
+    "docx": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "c344d313b454adec2a8e68975b72f474990a92670a40b3b275f3ce523b077925"
+    },
+    "frontend-design": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "e8118284a6365753790d44bb2758a6032b3af27fa84696428d9233f2be0f4e78"
+    },
+    "image-manipulation-image-magick": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "f4f81a1054a423c5eff04f05c1b72335beae2251201c5b5729b0dce4bee06f7e"
+    },
+    "knowledge-synthesis": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "f29d24bcd35f531c539a1f67f5cee3a525466ce9d10cffa53524a02fe4506feb"
+    },
+    "nextjs-best-practices": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "7b31199cce0f9a1b17acdf880469b0f9ddf9eb63577b1fde567def461d888287"
+    },
+    "payload": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "b05283309ff692d0041191a28fc76d04155fb61a822696ff926fe00a28eb1e1a"
+    },
+    "pdf": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "cfbc539377088ca7e44a813b30c306327385bbd973cd7a721e1743f60837dd62"
+    },
+    "playwright": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "578249eb3b9c5f8912e8d0b5fefbcf5d4e1dabb45a3eff877e1db7df2414d163"
+    },
+    "python-expert": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "502979957aa63e93b0366d357a241695181c93e739e1bb75b6410505bcc91ba9"
+    },
+    "react-patterns": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "39efd5a63422c248827fbb98df5df13f696c9c7b877c7cafe85ac60396018280"
+    },
+    "refactor": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "87789a786b96f99ba0680e89345a975106e10e7db1071c7cdc2e76d507c449d6"
+    },
+    "skill-writer": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "c220867183e2f6a32290b0c87d6dcc56ce507154e20ae7cb64ad91bee2d4677e"
+    },
+    "uv-package-manager": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "8b02057eb73c69f292981b3325447c0c852fb547b5a22312dd4ecff825e7a404"
+    },
+    "webapp-testing": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "cf8e5916d474886bd67b09691247f43f331523008b7d366064bc607ab42d6302"
+    },
+    "worktree-manager": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "8cb5028e71cd25a4f71de0ea9aa52bba1cfc568050c32a602d6c7b30bf9a7e6c"
+    },
+    "xlsx": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "177e203fba23b827d37caf4ce3b3c5eedbf7a89154511118827a2dde412f4a75"
+    }
+  }
+}

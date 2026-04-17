@@ -24,9 +24,9 @@ Systematic code review that goes beyond style nits. Performs blast radius analys
 
 Identify what changed:
 ```bash
-git diff --name-only main...HEAD
-git diff --stat main...HEAD
-git log --oneline main...HEAD
+rtk git diff --name-only main...HEAD
+rtk git diff --stat main...HEAD
+rtk git log --oneline main...HEAD
 ```
 
 ### Step 2 — Blast Radius Analysis
@@ -36,18 +36,18 @@ For each changed file, identify:
 1. **Direct dependents** — who imports this file?
 ```bash
 # Find all files importing a changed module
-grep -r "from ['\"].*changed-module['\"]" src/ --include="*.ts" -l
-grep -r "import.*changed-module" src/ --include="*.py" -l
+rtk grep -r "from ['\"].*changed-module['\"]" src/ --include="*.ts" -l
+rtk grep -r "import.*changed-module" src/ --include="*.py" -l
 ```
 
 2. **Service boundaries** — does this change cross a service?
 ```bash
-git diff --name-only main...HEAD | cut -d/ -f1-2 | sort -u
+rtk git diff --name-only main...HEAD | cut -d/ -f1-2 | sort -u
 ```
 
 3. **Shared contracts** — types, interfaces, schemas
 ```bash
-git diff --name-only main...HEAD | grep -E "types/|interfaces/|schemas/|models/"
+rtk git diff --name-only main...HEAD | rtk grep -E "types/|interfaces/|schemas/|models/"
 ```
 
 **Severity classification:**
@@ -75,8 +75,8 @@ Check diff for common vulnerability patterns:
 
 ```bash
 # Count source vs test files changed
-git diff --name-only main...HEAD | grep -vE "\.test\.|\.spec\.|__tests__" | wc -l  # source
-git diff --name-only main...HEAD | grep -E "\.test\.|\.spec\.|__tests__" | wc -l   # tests
+rtk git diff --name-only main...HEAD | rtk grep -vE "\.test\.|\.spec\.|__tests__" | wc -l  # source
+rtk git diff --name-only main...HEAD | rtk grep -E "\.test\.|\.spec\.|__tests__" | wc -l   # tests
 ```
 
 **Coverage rules:**

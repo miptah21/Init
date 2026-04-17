@@ -78,25 +78,25 @@ Use grep to check for critical patterns:
 
 ```bash
 # Hardcoded secrets
-grep -rnE "(password|secret|api_key|token)\s*=\s*['\"][^'\"]{8,}" src/
+rtk grep -rnE "(password|secret|api_key|token)\s*=\s*['\"][^'\"]{8,}" src/
 
 # SQL injection
-grep -rn "query\|execute" src/ | grep -E '\$\{|f"|%s|format\('
+rtk grep -rn "query\|execute" src/ | rtk grep -E '\$\{|f"|%s|format\('
 
 # XSS
-grep -rn "dangerouslySetInnerHTML\|innerHTML\s*=" src/
+rtk grep -rn "dangerouslySetInnerHTML\|innerHTML\s*=" src/
 
 # eval/exec
-grep -rnE "\beval\(|\bexec\(" src/
+rtk grep -rnE "\beval\(|\bexec\(" src/
 
 # AWS keys
-grep -rnE "AKIA[0-9A-Z]{16}" .
+rtk grep -rnE "AKIA[0-9A-Z]{16}" .
 ```
 
 ### Full Audit
 
-1. **Scan source code** using grep patterns above
-2. **Check dependencies** — `bun audit` / `pip audit`
+1. **Scan source code** using rtk grep patterns above
+2. **Check dependencies** — `rtk bun audit` / `pip audit`
 3. **Review auth flows** — trace login, session, permission checks
 4. **Check configurations** — CORS, CSP, cookie settings
 5. **Review error handling** — ensure no sensitive data in error messages

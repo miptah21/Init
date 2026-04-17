@@ -26,19 +26,19 @@ Scan the repository for stack signals:
 
 ```bash
 # Check for package managers
-ls package.json bun.lock package-lock.json yarn.lock pnpm-lock.yaml 2>/dev/null
-ls requirements.txt pyproject.toml Pipfile.lock poetry.lock 2>/dev/null
-ls go.mod go.sum 2>/dev/null
-ls Cargo.toml Cargo.lock 2>/dev/null
+rtk ls package.json bun.lock package-lock.json yarn.lock pnpm-lock.yaml 2>/dev/null
+rtk ls requirements.txt pyproject.toml Pipfile.lock poetry.lock 2>/dev/null
+rtk ls go.mod go.sum 2>/dev/null
+rtk ls Cargo.toml Cargo.lock 2>/dev/null
 
 # Check for frameworks
-grep -l "next" package.json 2>/dev/null          # Next.js
-grep -l "react" package.json 2>/dev/null          # React
-grep -l "django" requirements.txt 2>/dev/null     # Django
-grep -l "fastapi" requirements.txt 2>/dev/null    # FastAPI
+rtk grep -l "next" package.json 2>/dev/null          # Next.js
+rtk grep -l "react" package.json 2>/dev/null          # React
+rtk grep -l "django" requirements.txt 2>/dev/null     # Django
+rtk grep -l "fastapi" requirements.txt 2>/dev/null    # FastAPI
 
 # Check for existing scripts
-cat package.json | jq '.scripts' 2>/dev/null
+rtk read package.json | jq '.scripts' 2>/dev/null
 ```
 
 **Detection heuristics:**

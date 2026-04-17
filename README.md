@@ -13,7 +13,7 @@
 Project Init is a curated collection of instructions, skills, workflows, and conventions that make AI coding agents significantly more effective. It follows the [AGENTS.md](https://agents.md) open standard (Linux Foundation). Copy this template to get:
 
 - ✅ **Agent instructions** (`AGENTS.md`) — Slim, focused behavioral rules (~200 lines)
-- ✅ **9 skills** — PR review, security audit, dependency check, performance profiling, CI/CD, tech debt, web design, React hooks, git workflow
+- ✅ **33 skills** — PR review, security audit, web design, testing, Python, Node, data analysis, and more
 - ✅ **10 workflows** — Step-by-step procedures including self-reflection
 - ✅ **Convention docs** — TypeScript, testing, React/Next.js, comments, implementation protocol, communication style
 - ✅ **Token optimization** — [RTK](https://github.com/rtk-ai/rtk) integration rules for 60-90% token savings on shell outputs
@@ -118,6 +118,30 @@ The agent reads `AGENTS.md` automatically and follows established patterns.
 | **web-design-guidelines** | Vendored Vercel guidelines + 10-point review checklist |
 | **react-useeffect** | React hooks anti-patterns and state sync fixes |
 | **git-workflow** | Conventional commits, branch naming, PR templates |
+| **seo-optimizer** | Strategy, technical SEO, keywords |
+| **ag-md-improver** | Audit, check, and improve AGENTS.md |
+| **agentic-eval** | Self-critique, evaluator-optimizer pipelines |
+| **algorithmic-art** | Seeded randomness, interactive parameters |
+| **canvas-design** | Visual art in .png and .pdf |
+| **chrome-devtools** | Chrome DevTools MCP, profiling, network |
+| **clean-code** | Concise, direct, no over-engineering |
+| **database-design** | Indexing, ORM, serverless databases |
+| **docx** | Create, read, edit Word docs |
+| **frontend-design** | Distinctive, production-grade interfaces |
+| **image-manipulation-image-magick** | Resize, convert, batch process |
+| **knowledge-synthesis** | Combine sources, deduplicate, attribute |
+| **nextjs-best-practices** | Server Components, routing, data fetching |
+| **payload** | Schema, hooks, access control |
+| **pdf** | Read, merge, split, watermark, OCR |
+| **playwright** | E2E automation via terminal |
+| **python-expert** | Best practices, PEP 8, debugging |
+| **react-patterns** | Hooks, composition, performance |
+| **refactor** | Improve maintainability, eliminate smells |
+| **skill-writer** | Author/design new SKILL.md files |
+| **uv-package-manager** | Fast dependency management with uv |
+| **webapp-testing** | Playwright-based local UI debugging |
+| **worktree-manager** | Create/manage git worktrees |
+| **xlsx** | Open, read, edit, clean tabular data |
 
 ## Workflows
 

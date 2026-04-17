@@ -47,25 +47,25 @@ Identify, score, prioritize, and track technical debt across a codebase. Provide
 
 ```bash
 # Count TODO/FIXME/HACK markers
-grep -rn "TODO\|FIXME\|HACK\|XXX\|TEMP\|WORKAROUND" src/ --include="*.ts" --include="*.tsx" --include="*.py" | wc -l
+rtk grep -rn "TODO\|FIXME\|HACK\|XXX\|TEMP\|WORKAROUND" src/ --include="*.ts" --include="*.tsx" --include="*.py" | wc -l
 
 # List them with context
-grep -rn "TODO\|FIXME\|HACK" src/ --include="*.ts" --include="*.tsx"
+rtk grep -rn "TODO\|FIXME\|HACK" src/ --include="*.ts" --include="*.tsx"
 
 # Find long files (>300 lines — potential god objects)
-find src/ -name "*.ts" -o -name "*.tsx" | xargs wc -l | sort -rn | head -20
+rtk find src/ -name "*.ts" -o -name "*.tsx" | xargs wc -l | sort -rn | head -20
 
 # Find large functions (crude heuristic)
-grep -c "function\|=>" src/**/*.ts | sort -t: -k2 -rn | head -20
+rtk grep -c "function\|=>" src/**/*.ts | sort -t: -k2 -rn | head -20
 
 # Duplicated code (if jscpd available)
-bunx jscpd src/ --min-lines 10 --min-tokens 50
+rtk bunx jscpd src/ --min-lines 10 --min-tokens 50
 
 # Test coverage
-bun test -- --coverage 2>/dev/null | tail -5
+rtk test bun test -- --coverage 2>/dev/null | tail -5
 
 # Outdated dependencies
-bun outdated 2>/dev/null
+rtk bun outdated 2>/dev/null
 ```
 
 ### Step 2: Manual Assessment
