@@ -186,61 +186,39 @@ done
 ## Common Patterns
 
 ### PowerShell Patterns
-
-#### Pattern: Store ImageMagick Path
-
 ```powershell
+# Store ImageMagick Path
 $magick = (Get-Command magick).Source
-```
 
-#### Pattern: Get Dimensions as Variables
-
-```powershell
+# Get Dimensions as Variables
 $dimensions = & $magick identify -format "%w,%h" $_.FullName
 $width,$height = $dimensions -split ','
-```
 
-#### Pattern: Conditional Processing
-
-```powershell
+# Conditional Processing
 if ([int]$width -gt 1920) {
     & $magick $_.FullName -resize 1920x1080 $outputPath
 }
-```
 
-#### Pattern: Create Thumbnails
-
-```powershell
+# Create Thumbnails
 & $magick $_.FullName -resize 427x240 "thumbnails/thumb_$($_.Name)"
 ```
 
 ### Bash Patterns
-
-#### Pattern: Check ImageMagick Installation
-
 ```bash
+# Check ImageMagick Installation
 command -v magick &> /dev/null || { echo "ImageMagick required"; exit 1; }
-```
 
-#### Pattern: Get Dimensions as Variables
-
-```bash
+# Get Dimensions as Variables
 dimensions=$(magick identify -format "%w,%h" "$img")
 width=$(echo "$dimensions" | cut -d',' -f1)
 height=$(echo "$dimensions" | cut -d',' -f2)
-```
 
-#### Pattern: Conditional Processing
-
-```bash
+# Conditional Processing
 if [[ "$width" -gt 1920 ]]; then
     magick "$img" -resize 1920x1080 "$outputPath"
 fi
-```
 
-#### Pattern: Create Thumbnails
-
-```bash
+# Create Thumbnails
 filename=$(basename "$img")
 magick "$img" -resize 427x240 "thumbnails/thumb_$filename"
 ```

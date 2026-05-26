@@ -110,11 +110,6 @@ git merge <feature-branch>
 <test command>
 
 # Only after merge succeeds: cleanup worktree (Step 6), then delete branch
-```
-
-Then: Cleanup worktree (Step 6), then delete branch:
-
-```bash
 git branch -d <feature-branch>
 ```
 
