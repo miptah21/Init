@@ -43,6 +43,7 @@ If a command must be executed in the terminal (due to lack of a high-level tool 
 ## Linter & Artifact Boundaries
 - **Ignore Audit Reports:** Always ensure generated verification reports or compliance dashboards (like `audit_report.md`) are ignored by search, lint, and static analysis tools to avoid self-referential false positives.
 - **Windows Encoding Safeguard:** Any Python validation, execution, or sweep script that outputs emojis or non-ASCII characters MUST reconfigure `sys.stdout` to UTF-8 to prevent Windows terminal execution crashes.
+- **Compliance Bypass Comments:** Highly cohesive files or visual templates that intentionally exceed default limits (such as `SKILL.md` size constraints or raw text i18n checks) may use comments like `<!-- i18n-ignore -->`, `<!-- lint-ignore-file-size -->`, or `# lint-ignore-file-size` to skip linter warnings.
 
 ## Coding Style, Standards & Boundaries
 > **Single source of truth:** See `.agents/skills/CONTEXT.md` for all coding conventions, architecture context, and "Don't Touch" boundaries.
@@ -65,6 +66,7 @@ The following **skills** also act as foundational project conventions:
 ### Methodology Selection Protocol
 - **Standard Tasks (Trivial/Explicit):** Use lightweight default conventions (`clean-code`, `git-workflow`, `tdd`) to optimize token consumption and maintain high execution speed.
 - **Complex Tasks (Open-ended/Architectural, >3 steps):** Activate the **Superpowers** methodology (`using-superpowers`) as the primary execution framework. Superpowers skills (Socratic brainstorming, structured planning, isolated worktrees, and systematic debugging) will override default workflows to ensure maximum code safety and rigorous verification.
+- **Dynamic Escalation Protocol:** If a standard task fails verification checks/tests more than twice, requires changes across more than 3 files, or introduces unexpected architectural dependencies, the agent MUST immediately escalate to the **Superpowers** methodology.
 
 ## Hard Blocks (NEVER violate)
 
