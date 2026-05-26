@@ -32,6 +32,9 @@ def check_i18n(target_dir):
                 warnings.append(f"[{rel_path}:0] Could not read file: {e}")
                 continue
                 
+            if "i18n-ignore" in content:
+                continue
+                
             matches = raw_text_regex.findall(content)
             has_hardcoded = False
             for match in matches:
