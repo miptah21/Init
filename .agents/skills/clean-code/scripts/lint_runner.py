@@ -39,7 +39,7 @@ def lint_directory(target_dir):
                     warnings.append(f"[{rel_path}:0] SKILL.md exceeds 250 lines constraint ({len(lines)} lines)")
                 else:
                     passes.append(f"{rel_path} size is within constraints ({len(lines)} lines)")
-            elif len(lines) > 500:
+            elif len(lines) > 500 and not file.endswith(".md"):
                 warnings.append(f"[{rel_path}:0] File is large ({len(lines)} lines). Consider modularizing.")
                 
             nest_level = 0
@@ -52,18 +52,19 @@ def lint_directory(target_dir):
                     elif re.search(r"//\s*.*i\+\+", line, re.IGNORECASE) or re.search(r"i\+\+\s*//", line):
                         errors.append(f"[{rel_path}:{idx}] Obvious comment: {line.strip()}")
                         
-                # Rule 3: Check nesting level (approximate curly brace nesting)
-                stripped = line.strip()
-                if "{" in stripped:
-                    nest_level += stripped.count("{")
-                if "}" in stripped:
-                    nest_level -= stripped.count("}")
-                if nest_level > 4:
-                    if not in_deep_nest:
-                        warnings.append(f"[{rel_path}:{idx}] Deeply nested block starts here (nesting level: {nest_level})")
-                        in_deep_nest = True
-                else:
-                    in_deep_nest = False
+                # Rule 3: Check nesting level (approximate curly brace nesting - restrict to JS/TS files)
+                if file.endswith((".ts", ".tsx", ".js", ".jsx")):
+                    stripped = line.strip()
+                    if "{" in stripped:
+                        nest_level += stripped.count("{")
+                    if "}" in stripped:
+                        nest_level -= stripped.count("}")
+                    if nest_level > 4:
+                        if not in_deep_nest:
+                            warnings.append(f"[{rel_path}:{idx}] Deeply nested block starts here (nesting level: {nest_level})")
+                            in_deep_nest = True
+                    else:
+                        in_deep_nest = False
                     
     # Compile results
     print(f"## Script Results: lint_runner.py")
