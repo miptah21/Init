@@ -30,3 +30,4 @@ clone_temp/
 # Agent workspace
 .gemini/
 audit_report.md
+output/
