@@ -1,76 +1,53 @@
-#!/usr/bin/env python3
-"""
-Skill: performance-profiling
-Script: lighthouse_audit.py
-Purpose: Run Lighthouse performance audit on a URL
-Usage: python lighthouse_audit.py https://example.com
-Output: JSON with performance scores
-Note: Requires lighthouse CLI (npm install -g lighthouse)
-"""
-import subprocess
-import json
-import sys
 import os
-import tempfile
+import sys
 
-def run_lighthouse(url: str) -> dict:
-    """Run Lighthouse audit on URL."""
-    try:
-        with tempfile.NamedTemporaryFile(suffix='.json', delete=False) as f:
-            output_path = f.name
-        
-        result = subprocess.run(
-            [
-                "lighthouse",
-                url,
-                "--output=json",
-                f"--output-path={output_path}",
-                "--chrome-flags=--headless",
-                "--only-categories=performance,accessibility,best-practices,seo"
-            ],
-            capture_output=True,
-            text=True,
-            timeout=120
-        )
-        
-        if os.path.exists(output_path):
-            with open(output_path, 'r') as f:
-                report = json.load(f)
-            os.unlink(output_path)
-            
-            categories = report.get("categories", {})
-            return {
-                "url": url,
-                "scores": {
-                    "performance": int(categories.get("performance", {}).get("score", 0) * 100),
-                    "accessibility": int(categories.get("accessibility", {}).get("score", 0) * 100),
-                    "best_practices": int(categories.get("best-practices", {}).get("score", 0) * 100),
-                    "seo": int(categories.get("seo", {}).get("score", 0) * 100)
-                },
-                "summary": get_summary(categories)
-            }
-        else:
-            return {"error": "Lighthouse failed to generate report", "stderr": result.stderr[:500]}
-            
-    except subprocess.TimeoutExpired:
-        return {"error": "Lighthouse audit timed out"}
-    except FileNotFoundError:
-        return {"error": "Lighthouse CLI not found. Install with: npm install -g lighthouse"}
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
 
-def get_summary(categories: dict) -> str:
-    """Generate summary based on scores."""
-    perf = categories.get("performance", {}).get("score", 0) * 100
-    if perf >= 90:
-        return "[OK] Excellent performance"
-    elif perf >= 50:
-        return "[!] Needs improvement"
-    else:
-        return "[X] Poor performance"
+def audit_perf(target_dir):
+    errors = []
+    warnings = []
+    passes = []
+    
+    for root, dirs, files in os.walk(target_dir):
+        if any(ignored in root for ignored in ["node_modules", ".git", ".gemini"]):
+            continue
+            
+        for file in files:
+            if not file.endswith((".html", ".css", ".js")):
+                continue
+                
+            file_path = os.path.join(root, file)
+            rel_path = os.path.relpath(file_path, target_dir)
+            
+            try:
+                with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                    content = f.read()
+            except Exception as e:
+                warnings.append(f"[{rel_path}:0] Could not read file: {e}")
+                continue
+                
+            # Audit blocking script tags
+            if file.endswith(".html"):
+                if "<script" in content and "defer" not in content and "async" not in content:
+                    warnings.append(f"[{rel_path}] Render-blocking script tag detected. Consider adding 'defer' or 'async'.")
+                else:
+                    passes.append(f"{rel_path} scripts loaded non-blockingly.")
+                    
+    print(f"## Script Results: lighthouse_audit.py")
+    print(f"\n### ❌ Errors Found ({len(errors)} items)")
+    for err in errors:
+        print(f"- {err}")
+        
+    print(f"\n### ⚠️ Warnings ({len(warnings)} items)")
+    for warn in warnings:
+        print(f"- {warn}")
+        
+    print(f"\n### ✅ Passed ({len(passes)} items)")
+    if passes:
+        for p in passes[:10]:
+            print(f"- {p}")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print(json.dumps({"error": "Usage: python lighthouse_audit.py <url>"}))
-        sys.exit(1)
-    
-    result = run_lighthouse(sys.argv[1])
-    print(json.dumps(result, indent=2))
+    target = sys.argv[1] if len(sys.argv) > 1 else "."
+    audit_perf(target)

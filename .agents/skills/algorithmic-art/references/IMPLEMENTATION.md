@@ -89,7 +89,6 @@ To guide the implementation, let the conceptual essence inform creative and orig
 ```javascript
 function setup() {
   createCanvas(1200, 1200);
-  // Initialize your system
 }
 
 function draw() {

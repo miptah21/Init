@@ -1,0 +1,30 @@
+# 🧠 Agentic Engineering Skills Library — Unified Python Dependencies
+# Target installation: pip install -r requirements.txt
+
+# --- Core Validation Scripts ---
+# Standard scripts (accessibility_checker.py, api_validator.py, schema_validator.py, lint_runner.py, etc.)
+# run entirely on Python's Standard Library (no external dependencies required).
+
+# --- Specialized Analytical & Data Engineering Skills ---
+pandas>=2.0.0
+polars>=0.19.0
+numpy>=1.24.0
+click>=8.1.0
+sqlalchemy>=2.0.0
+jupyter_client>=8.0.0
+
+# --- Data Visualization Skills ---
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+
+# --- Document Generation Skills ---
+python-docx>=0.8.11
+python-pptx>=0.6.21
+PyMuPDF>=1.22.0  # fitz
+openpyxl>=3.1.0
+
+# --- Dev & Code Quality Utilities ---
+black>=23.0.0
+isort>=5.12.0
+mypy>=1.3.0

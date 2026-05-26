@@ -1,7 +1,7 @@
 {
   "name": "skills",
   "version": "2.0.0",
-  "description": "Comprehensive agentic engineering skills library \u2014 101 specialized AI agent skills covering data engineering, frontend, financial analysis, document generation, DevOps, and more. Managed via Antigravity.",
+  "description": "Comprehensive agentic engineering skills library \u2014 118 specialized AI agent skills covering data engineering, frontend, financial analysis, document generation, DevOps, and more. Managed via Antigravity.",
   "author": {
     "name": "miptah21"
   },
@@ -24,7 +24,7 @@
     "devops",
     "observability"
   ],
-  "skills_count": 103,
+  "skills_count": 118,
   "skill_categories": {
     "dbt_snowflake": [
       "creating-dbt-models",
@@ -117,7 +117,8 @@
       "caveman",
       "triage",
       "zoom-out",
-      "git-guardrails-claude-code"
+      "git-guardrails-claude-code",
+      "karpathy-guidelines"
     ],
     "frontend_web": [
       "frontend-design",
@@ -150,6 +151,22 @@
       "pipeline-orchestration",
       "data-governance",
       "rca-diagnostics"
+    ],
+    "superpowers": [
+      "using-superpowers",
+      "brainstorming",
+      "using-git-worktrees",
+      "writing-plans",
+      "executing-plans",
+      "dispatching-parallel-agents",
+      "test-driven-development",
+      "systematic-debugging",
+      "verification-before-completion",
+      "requesting-code-review",
+      "receiving-code-review",
+      "finishing-a-development-branch",
+      "subagent-driven-development",
+      "writing-skills"
     ]
   },
   "internal_skills": [

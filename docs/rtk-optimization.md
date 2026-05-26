@@ -28,6 +28,7 @@ At session start, check: `rtk --version`
 | `curl <url>` | `rtk curl <url>` | ~80% |
 
 ## Rules
+- **Tool Preference:** Always prefer default agent workspace API tools (e.g., `view_file`, `list_dir`, `grep_search`) over `rtk read`, `rtk ls`, or `rtk grep` command executions. High-level API tools do not require shell spawning or manual user execution approval and are highly token-efficient.
 - Never use RTK for file writes — only for reads, queries, and status commands
 - If a command fails via RTK, retry without `rtk` prefix as fallback
 - Use `rtk gain` periodically to report token savings to the user

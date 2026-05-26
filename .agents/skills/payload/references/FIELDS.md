@@ -313,8 +313,6 @@ const locationField: PointField = {
   label: 'Location',
   required: true,
 }
-
-// Returns [longitude, latitude]
 // Example: [-122.4194, 37.7749] for San Francisco
 ```
 

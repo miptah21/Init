@@ -119,6 +119,7 @@
 | [triage](triage/SKILL.md) | Triage issues through a state machine of triage roles |
 | [zoom-out](zoom-out/SKILL.md) | Zoom out to give a broader context or high-level perspective |
 | [git-guardrails-claude-code](git-guardrails-claude-code/SKILL.md) | Block dangerous git commands (push, reset --hard) with hooks |
+| [karpathy-guidelines](karpathy-guidelines/SKILL.md) | Behavioral guidelines, reduce mistakes, Karpathy guidelines, think before coding, surgical changes |
 
 ## Frontend & Web Development
 
@@ -167,6 +168,25 @@
 | [writing-shape](writing-shape/SKILL.md) | Shape raw material into a drafted article, block by block |
 | [writing-beats](writing-beats/SKILL.md) | Choose-your-own-adventure style article generation from notes |
 | [obsidian-vault](obsidian-vault/SKILL.md) | Search, create, and manage notes in an Obsidian vault |
+
+## Superpowers Software Development Methodology
+
+| Skill | Trigger Keywords |
+|-------|-----------------|
+| [using-superpowers](using-superpowers/SKILL.md) | Introduction to the superpowers skills system and methodology |
+| [brainstorming](brainstorming/SKILL.md) | Socratic design refinement, collaborative intent exploration |
+| [using-git-worktrees](using-git-worktrees/SKILL.md) | Git worktrees, isolated workspace setup, verify clean test baseline |
+| [writing-plans](writing-plans/SKILL.md) | Implementation plans, bite-sized tasks with complete code/paths |
+| [executing-plans](executing-plans/SKILL.md) | Batch execution with human checkpoints, execute implementation plans |
+| [dispatching-parallel-agents](dispatching-parallel-agents/SKILL.md) | Concurrent subagent workflows, dispatching parallel agents |
+| [test-driven-development](test-driven-development/SKILL.md) | RED-GREEN-REFACTOR cycle, write tests first, delete speculative code |
+| [systematic-debugging](systematic-debugging/SKILL.md) | 4-phase root cause process, root-cause-tracing, defense-in-depth |
+| [verification-before-completion](verification-before-completion/SKILL.md) | Ensure it is actually fixed, verify changes before completing |
+| [requesting-code-review](requesting-code-review/SKILL.md) | Pre-review checklist, review against implementation plan |
+| [receiving-code-review](receiving-code-review/SKILL.md) | Responding to code review feedback, fixing reported issues |
+| [finishing-a-development-branch](finishing-a-development-branch/SKILL.md) | Merge/PR decision workflow, cleaning up worktrees, completing branch |
+| [subagent-driven-development](subagent-driven-development/SKILL.md) | Two-stage review (spec compliance, then code quality), fast subagent iteration |
+| [writing-skills](writing-skills/SKILL.md) | Create new skills following best practices, skill authoring guide |
 
 ## Background Knowledge (non-invocable)
 

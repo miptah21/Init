@@ -256,7 +256,7 @@ const seed = Math.floor(Math.random() * 2147483647);
 ## Version and VersionNonce
 
 ```javascript
-const version = 1;  // Increment when element is edited
+const version = 1;
 const versionNonce = Math.floor(Math.random() * 2147483647);
 ```
 

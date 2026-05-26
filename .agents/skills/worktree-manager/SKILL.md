@@ -85,7 +85,7 @@ AFTER ALL: Report summary table, note failures
 ### 2. Check Status
 
 ```bash
-cat ~/.claude/worktree-registry.json | jq -r '.worktrees[] | "\(.project)\t\(.branch)\t\(.ports | join(","))\t\(.status)"'
+cat ~/.gemini/antigravity/worktree-registry.json | jq -r '.worktrees[] | "\(.project)\t\(.branch)\t\(.ports | join(","))\t\(.status)"'
 ```
 
 ### 3. Cleanup Worktree
@@ -105,7 +105,7 @@ After `gh pr create`, update registry with PR number:
 ```bash
 PR_NUM=$(gh pr view --json number -q '.number')
 jq "(.worktrees[] | select(.branch == \"$BRANCH\")).prNumber = $PR_NUM" \
-  ~/.claude/worktree-registry.json > "$TMP" && mv "$TMP" ~/.claude/worktree-registry.json
+  ~/.gemini/antigravity/worktree-registry.json > "$TMP" && mv "$TMP" ~/.gemini/antigravity/worktree-registry.json
 ```
 
 ---

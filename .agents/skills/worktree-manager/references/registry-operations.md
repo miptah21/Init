@@ -59,27 +59,27 @@
 
 **Read entire registry:**
 ```bash
-cat ~/.claude/worktree-registry.json | jq '.'
+cat ~/.gemini/antigravity/worktree-registry.json | jq '.'
 ```
 
 **List all worktrees:**
 ```bash
-cat ~/.claude/worktree-registry.json | jq '.worktrees[]'
+cat ~/.gemini/antigravity/worktree-registry.json | jq '.worktrees[]'
 ```
 
 **List worktrees for specific project:**
 ```bash
-cat ~/.claude/worktree-registry.json | jq '.worktrees[] | select(.project == "my-project")'
+cat ~/.gemini/antigravity/worktree-registry.json | jq '.worktrees[] | select(.project == "my-project")'
 ```
 
 **Get allocated ports:**
 ```bash
-cat ~/.claude/worktree-registry.json | jq '.portPool.allocated'
+cat ~/.gemini/antigravity/worktree-registry.json | jq '.portPool.allocated'
 ```
 
 **Find worktree by branch (partial match):**
 ```bash
-cat ~/.claude/worktree-registry.json | jq '.worktrees[] | select(.branch | contains("auth"))'
+cat ~/.gemini/antigravity/worktree-registry.json | jq '.worktrees[] | select(.branch | contains("auth"))'
 ```
 
 **Add worktree entry manually:**
@@ -99,27 +99,27 @@ jq '.worktrees += [{
   "task": "My task",
   "prNumber": null,
   "status": "active"
-}]' ~/.claude/worktree-registry.json > "$TMP" && mv "$TMP" ~/.claude/worktree-registry.json
+}]' ~/.gemini/antigravity/worktree-registry.json > "$TMP" && mv "$TMP" ~/.gemini/antigravity/worktree-registry.json
 ```
 
 **Remove worktree entry:**
 ```bash
 TMP=$(mktemp)
 jq 'del(.worktrees[] | select(.project == "my-project" and .branch == "feature/auth"))' \
-  ~/.claude/worktree-registry.json > "$TMP" && mv "$TMP" ~/.claude/worktree-registry.json
+  ~/.gemini/antigravity/worktree-registry.json > "$TMP" && mv "$TMP" ~/.gemini/antigravity/worktree-registry.json
 ```
 
 **Release ports from pool:**
 ```bash
 TMP=$(mktemp)
 jq '.portPool.allocated = (.portPool.allocated | map(select(. != 8100 and . != 8101)))' \
-  ~/.claude/worktree-registry.json > "$TMP" && mv "$TMP" ~/.claude/worktree-registry.json
+  ~/.gemini/antigravity/worktree-registry.json > "$TMP" && mv "$TMP" ~/.gemini/antigravity/worktree-registry.json
 ```
 
 **Initialize empty registry (if missing):**
 ```bash
-mkdir -p ~/.claude
-cat > ~/.claude/worktree-registry.json << 'EOF'
+mkdir -p ~/.gemini/antigravity
+cat > ~/.gemini/antigravity/worktree-registry.json << 'EOF'
 {
   "worktrees": [],
   "portPool": {
@@ -135,7 +135,7 @@ EOF
 
 **Step 1: Get currently allocated ports**
 ```bash
-ALLOCATED=$(cat ~/.claude/worktree-registry.json | jq -r '.portPool.allocated[]' | sort -n)
+ALLOCATED=$(cat ~/.gemini/antigravity/worktree-registry.json | jq -r '.portPool.allocated[]' | sort -n)
 echo "Currently allocated: $ALLOCATED"
 ```
 
@@ -167,7 +167,7 @@ Scripts are in `.agents/skills/worktree-manager/scripts/`
 
 ## Skill Config
 
-Location: `~/.claude/skills/worktree-manager/config.json`
+Location: `.agents/skills/worktree-manager/config.json`
 
 ```json
 {

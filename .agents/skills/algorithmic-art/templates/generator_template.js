@@ -53,7 +53,6 @@ function initializeSeed(seed) {
 function setup() {
     createCanvas(800, 800);
 
-    // Initialize seed first
     initializeSeed(params.seed);
 
     // Set up your generative system
@@ -91,7 +90,6 @@ function draw() {
 
 class Entity {
     constructor() {
-        // Initialize entity properties
         // Use random() here - it will be seeded
     }
 

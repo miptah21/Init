@@ -108,17 +108,15 @@ const posts = await payload.find({
 const post = await payload.findByID({
   collection: 'posts',
   id: '123',
-  depth: 2, // Populates relationships (default is 2)
+  depth: 2,
 })
-// Returns: { author: { id: "user123", name: "John" } }
 
 // Without depth, relationships return IDs only
-const post = await payload.findByID({
+const postWithoutDepth = await payload.findByID({
   collection: 'posts',
   id: '123',
   depth: 0,
 })
-// Returns: { author: "user123" }
 ```
 
 For all query operators and REST/GraphQL examples, see [QUERIES.md](QUERIES.md).

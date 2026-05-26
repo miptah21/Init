@@ -7,8 +7,8 @@
     "end": 8199
   },
   "portsPerWorktree": 2,
-  "worktreeBase": "~/.archon/worktrees",
-  "registryPath": "~/.claude/worktree-registry.json",
+  "worktreeBase": "~/tmp/worktrees",
+  "registryPath": "~/.gemini/antigravity/worktree-registry.json",
   "defaultCopyDirs": [".agents", ".env.example", ".env"],
   "healthCheckTimeout": 30,
   "healthCheckRetries": 6

@@ -9,6 +9,7 @@ priority: CRITICAL
 # Clean Code - Pragmatic AI Coding Standards
 
 > **CRITICAL SKILL** - Be **concise, direct, and solution-focused**.
+> **Reference:** For defensive coding behaviors and LLM mistake mitigation, refer to the [karpathy-guidelines](../karpathy-guidelines/SKILL.md) skill.
 
 ---
 
@@ -141,26 +142,38 @@ File to edit: UserService.ts
 
 ## Verification Scripts (MANDATORY)
 
-> 🔴 **CRITICAL:** Each agent runs ONLY their own skill's scripts after completing work.
+> 🔴 **CRITICAL:** Agents can run the centralized compliance runner to audit the whole project, or execute individual script mappings.
+
+### Centralized Compliance Suite (Recommended)
+
+Run a complete automated sweep across all validation scripts to generate a unified `audit_report.md` dashboard:
+```bash
+python .agents/scripts/run_all_audits.py [target_directory]
+```
+
+To run checks only for a specific category (e.g., `frontend`, `code`, `seo`, `security`):
+```bash
+python .agents/scripts/run_all_audits.py [target_directory] --category frontend
+```
 
 ### Agent → Script Mapping
 
 | Agent | Script | Command |
 |-------|--------|---------|
-| **frontend-specialist** | UX Audit | `python ~/.claude/skills/frontend-design/scripts/ux_audit.py .` |
-| **frontend-specialist** | A11y Check | `python ~/.claude/skills/frontend-design/scripts/accessibility_checker.py .` |
-| **backend-specialist** | API Validator | `python ~/.claude/skills/api-patterns/scripts/api_validator.py .` |
-| **mobile-developer** | Mobile Audit | `python ~/.claude/skills/mobile-design/scripts/mobile_audit.py .` |
-| **database-architect** | Schema Validate | `python ~/.claude/skills/database-design/scripts/schema_validator.py .` |
-| **security-auditor** | Security Scan | `python ~/.claude/skills/vulnerability-scanner/scripts/security_scan.py .` |
-| **seo-specialist** | SEO Check | `python ~/.claude/skills/seo-fundamentals/scripts/seo_checker.py .` |
-| **seo-specialist** | GEO Check | `python ~/.claude/skills/geo-fundamentals/scripts/geo_checker.py .` |
-| **performance-optimizer** | Lighthouse | `python ~/.claude/skills/performance-profiling/scripts/lighthouse_audit.py <url>` |
-| **test-engineer** | Test Runner | `python ~/.claude/skills/testing-patterns/scripts/test_runner.py .` |
-| **test-engineer** | Playwright | `python ~/.claude/skills/webapp-testing/scripts/playwright_runner.py <url>` |
-| **Any agent** | Lint Check | `python ~/.claude/skills/lint-and-validate/scripts/lint_runner.py .` |
-| **Any agent** | Type Coverage | `python ~/.claude/skills/lint-and-validate/scripts/type_coverage.py .` |
-| **Any agent** | i18n Check | `python ~/.claude/skills/i18n-localization/scripts/i18n_checker.py .` |
+| **frontend-specialist** | UX Audit | `python .agents/skills/frontend-design/scripts/ux_audit.py .` |
+| **frontend-specialist** | A11y Check | `python .agents/skills/frontend-design/scripts/accessibility_checker.py .` |
+| **backend-specialist** | API Validator | `python .agents/skills/clean-code/scripts/api_validator.py .` |
+| **mobile-developer** | Mobile Audit | `python .agents/skills/clean-code/scripts/mobile_audit.py .` |
+| **database-architect** | Schema Validate | `python .agents/skills/database-design/scripts/schema_validator.py .` |
+| **security-auditor** | Security Scan | `python .agents/skills/security-auditor/scripts/security_scan.py .` |
+| **seo-specialist** | SEO Check | `python .agents/skills/seo-optimizer/scripts/seo_checker.py .` |
+| **seo-specialist** | GEO Check | `python .agents/skills/seo-optimizer/scripts/geo_checker.py .` |
+| **performance-optimizer** | Lighthouse | `python .agents/skills/frontend-performance/scripts/lighthouse_audit.py <url>` |
+| **test-engineer** | Test Runner | `python .agents/skills/webapp-testing/scripts/test_runner.py .` |
+| **test-engineer** | Playwright | `python .agents/skills/webapp-testing/scripts/playwright_runner.py <url>` |
+| **Any agent** | Lint Check | `python .agents/skills/clean-code/scripts/lint_runner.py .` |
+| **Any agent** | Type Coverage | `python .agents/skills/clean-code/scripts/type_coverage.py .` |
+| **Any agent** | i18n Check | `python .agents/skills/clean-code/scripts/i18n_checker.py .` |
 
 > ❌ **WRONG:** `test-engineer` running `ux_audit.py`
 > ✅ **CORRECT:** `frontend-specialist` running `ux_audit.py`

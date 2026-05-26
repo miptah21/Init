@@ -232,7 +232,7 @@ await payload.update({
 const post = await payload.findByID({
   collection: 'posts',
   id: '123',
-  draft: true, // Returns draft version if exists
+  draft: true,
 })
 
 // Query only published (REST API)

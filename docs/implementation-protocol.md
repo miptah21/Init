@@ -13,6 +13,7 @@
 3. Do not handle only the happy path
 4. Under what conditions does this work?
 5. **Check for Stale Context:** Before importing, modifying, or copying a skill, verify it does not contain hardcoded references to specific business domains, project names, or applications (e.g., 'HR Analytics'). Keep skills purely functional and domain-agnostic.
+6. **Verification Script Registration:** When authoring or editing a skill's validation script, ensure it is registered in `SCRIPTS_REGISTRY` inside `.agents/scripts/run_all_audits.py` to maintain unified reporting.
 
 **Planning:**
 1. If task has 2+ steps → create a structured plan first
@@ -51,10 +52,20 @@ After delegated work completes, ALWAYS verify:
 
 After making changes, verify:
 
-1. **Changed files compile** — No new type errors or syntax issues
-2. **Build passes** — Run build command if available
-3. **Tests pass** — Run test suite if available
-4. **Both success and error paths work** — Don't just check the happy path
+1. **Global Audit Sweep** — Run the centralized compliance sweep:
+   `python .agents/scripts/run_all_audits.py`
+   Ensure exit code 0 is returned (verifying no execution crashes occurred), or explicitly list remaining pre-existing exceptions. Automated sweep runners MUST treat any non-zero exit code (`ret_code != 0`) from checked scripts as an execution failure to prevent silent runtime crashes from masking results.
+2. **Changed files compile** — No new type errors or syntax issues
+3. **Build passes** — Run build command if available
+4. **Tests pass** — Run test suite if available
+5. **Both success and error paths work** — Don't just check the happy path
+6. **Cross-platform encoding** — Any Python validation or orchestration scripts that print Unicode characters or emojis MUST reconfigure `sys.stdout` to support UTF-8 (or provide ASCII fallbacks) to prevent Windows shell encoding crashes:
+   ```python
+   import sys
+   if hasattr(sys.stdout, 'reconfigure'):
+       sys.stdout.reconfigure(encoding='utf-8')
+   ```
+
 
 ## Evidence Requirements
 
