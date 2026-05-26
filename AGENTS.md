@@ -62,6 +62,10 @@ The following **skills** also act as foundational project conventions:
 - `git-guardrails-claude-code` — Safety conventions preventing destructive git operations
 - `karpathy-guidelines` — Behavioral guidelines to reduce common LLM coding mistakes
 
+### Methodology Selection Protocol
+- **Standard Tasks (Trivial/Explicit):** Use lightweight default conventions (`clean-code`, `git-workflow`, `tdd`) to optimize token consumption and maintain high execution speed.
+- **Complex Tasks (Open-ended/Architectural, >3 steps):** Activate the **Superpowers** methodology (`using-superpowers`) as the primary execution framework. Superpowers skills (Socratic brainstorming, structured planning, isolated worktrees, and systematic debugging) will override default workflows to ensure maximum code safety and rigorous verification.
+
 ## Hard Blocks (NEVER violate)
 
 | Constraint | No Exceptions |
