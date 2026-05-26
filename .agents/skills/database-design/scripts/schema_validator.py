@@ -106,6 +106,9 @@ def main():
     print(f"Found {len(schemas)} schema files")
     
     if not schemas:
+        print("\n### ❌ Errors Found (0 items)")
+        print("\n### ⚠️ Warnings (0 items)")
+        print("\n### ✅ Passed (0 items)")
         output = {
             "script": "schema_validator",
             "project": str(project_path),
@@ -154,6 +157,13 @@ def main():
     # Schema issues are warnings, not failures
     passed = True
     
+    print(f"\n### ❌ Errors Found (0 items)")
+    print(f"\n### ⚠️ Warnings ({total_issues} items)")
+    if total_issues == 0:
+        print(f"\n### ✅ Passed ({len(schemas)} items)")
+    else:
+        print(f"\n### ✅ Passed (0 items)")
+        
     output = {
         "script": "schema_validator",
         "project": str(project_path),

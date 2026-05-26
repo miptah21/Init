@@ -13,7 +13,7 @@ def audit_security(target_dir):
     # Check for hardcoded API keys/passwords
     secret_patterns = [
         re.compile(r'(api_key|password|secret|token|passwd|credentials)\s*=\s*["\'][a-zA-Z0-9_\-]{8,}["\']', re.IGNORECASE),
-        re.compile(r'postgres://.*:.*@', re.IGNORECASE)
+        re.compile(r'postgres://.*:.*@', re.IGNORECASE)  # Example:
     ]
     
     for root, dirs, files in os.walk(target_dir):

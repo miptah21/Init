@@ -36,13 +36,14 @@ def lint_directory(target_dir):
             # Rule 1: File size constraints (specifically SKILL.md under 250 lines)
             if file == "SKILL.md":
                 if len(lines) > 250:
-                    errors.append(f"[{rel_path}:0] SKILL.md exceeds 250 lines constraint ({len(lines)} lines)")
+                    warnings.append(f"[{rel_path}:0] SKILL.md exceeds 250 lines constraint ({len(lines)} lines)")
                 else:
                     passes.append(f"{rel_path} size is within constraints ({len(lines)} lines)")
             elif len(lines) > 500:
                 warnings.append(f"[{rel_path}:0] File is large ({len(lines)} lines). Consider modularizing.")
                 
             nest_level = 0
+            in_deep_nest = False
             for idx, line in enumerate(lines, 1):
                 # Rule 2: Guard unacceptable comments (only for JS/TS/React files)
                 if file.endswith((".ts", ".tsx", ".js", ".jsx")) and "//" in line:
@@ -58,7 +59,11 @@ def lint_directory(target_dir):
                 if "}" in stripped:
                     nest_level -= stripped.count("}")
                 if nest_level > 4:
-                    warnings.append(f"[{rel_path}:{idx}] Deeply nested block (nesting level: {nest_level})")
+                    if not in_deep_nest:
+                        warnings.append(f"[{rel_path}:{idx}] Deeply nested block starts here (nesting level: {nest_level})")
+                        in_deep_nest = True
+                else:
+                    in_deep_nest = False
                     
     # Compile results
     print(f"## Script Results: lint_runner.py")

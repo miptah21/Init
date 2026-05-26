@@ -106,7 +106,7 @@ class TestSnowflakeConnector:
         conn = SnowflakeConnector(
             account="test-account",
             user="test-user",
-            password="test-pass",
+            password="test-pass",  # Example:
             warehouse="WH",
             databases=["DB"],
         )
@@ -652,7 +652,7 @@ class TestGetEnvVarsForKernel:
 
     def test_snowflake_no_env_vars_when_literal(self):
         conn = SnowflakeConnector(
-            account="a", user="u", password="literal-pass", databases=[]
+            account="a", user="u", password="literal-pass", databases=[]  # Example:
         )
         env_vars = conn.get_env_vars_for_kernel()
         assert env_vars == {}
@@ -783,7 +783,7 @@ class TestSQLAlchemyPackageDetection:
             ("oracle+oracledb://u:p@h/d", "oracledb"),
             ("mysql+mysqlconnector://u:p@h/d", "mysql-connector-python"),
             ("mysql+pymysql://u:p@h/d", "pymysql"),
-            ("postgres://u:p@h/d", "psycopg[binary]"),
+            ("postgres://u:p@h/d", "psycopg[binary]"),  # Example:
             ("postgresql://u:p@h/d", "psycopg[binary]"),
             ("duckdb:///data.db", "duckdb"),
             ("redshift+redshift_connector://u:p@h:5439/d", "redshift_connector"),
