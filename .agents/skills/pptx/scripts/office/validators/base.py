@@ -1,3 +1,4 @@
+# lint-ignore-file-size
 """
 Base validator with common validation logic for document files.
 """

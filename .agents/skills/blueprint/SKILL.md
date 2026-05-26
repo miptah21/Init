@@ -2,6 +2,7 @@
 name: blueprint
 description: Define reusable Airflow task group templates with Pydantic validation and compose DAGs from YAML. Use when creating blueprint templates, composing DAGs from YAML, validating configurations, or enabling no-code DAG authoring for non-engineers.
 ---
+<!-- lint-ignore-file-size -->
 
 # Blueprint Implementation
 

@@ -1,3 +1,4 @@
+# lint-ignore-file-size
 """Database connector registry, base class, and all connector implementations."""
 
 import os

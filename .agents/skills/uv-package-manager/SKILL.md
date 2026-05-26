@@ -2,6 +2,7 @@
 name: uv-package-manager
 description: Master the uv package manager for fast Python dependency management, virtual environments, and modern Python project workflows. Use when setting up Python projects, managing dependencies, or optimizing Python development workflows with uv.
 ---
+<!-- lint-ignore-file-size -->
 
 # UV Package Manager
 

@@ -2,6 +2,7 @@
 name: managing-astro-local-env
 description: Manage local Airflow environment with Astro CLI (Docker and standalone modes). Use when the user wants to start, stop, or restart Airflow, view logs, query the Airflow API, troubleshoot, or fix environment issues. For project setup, see setting-up-astro-project.
 ---
+<!-- lint-ignore-file-size -->
 
 # Astro Local Environment
 

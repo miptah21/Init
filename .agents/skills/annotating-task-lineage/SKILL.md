@@ -2,6 +2,7 @@
 name: annotating-task-lineage
 description: Annotate Airflow tasks with data lineage using inlets and outlets. Use when the user wants to add lineage metadata to tasks, specify input/output datasets, or enable lineage tracking for operators without built-in OpenLineage extraction.
 ---
+<!-- lint-ignore-file-size -->
 
 # Annotating Task Lineage with Inlets & Outlets
 

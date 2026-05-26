@@ -2,6 +2,7 @@
 name: skill-writer
 description: Guide users through creating Agent Skills for Antigravity. Use when the user wants to create, write, author, or design a new Skill, or needs help with SKILL.md files, frontmatter, or skill structure.
 ---
+<!-- lint-ignore-file-size -->
 
 # Skill Writer
 

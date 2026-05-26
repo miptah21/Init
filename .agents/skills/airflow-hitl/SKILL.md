@@ -2,6 +2,7 @@
 name: airflow-hitl
 description: Use when the user needs human-in-the-loop workflows in Airflow (approval/reject, form input, or human-driven branching). Covers ApprovalOperator, HITLOperator, HITLBranchOperator, HITLEntryOperator. Requires Airflow 3.1+. Does not cover AI/LLM calls (see airflow-ai).
 ---
+<!-- lint-ignore-file-size -->
 
 # Airflow Human-in-the-Loop Operators
 

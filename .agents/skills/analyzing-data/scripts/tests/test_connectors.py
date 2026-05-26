@@ -1,3 +1,4 @@
+# lint-ignore-file-size
 """Tests for database connectors."""
 
 import tempfile

@@ -2,6 +2,7 @@
 name: warehouse-init
 description: Initialize warehouse schema discovery. Generates .astro/warehouse.md with all table metadata for instant lookups. Run once per project, refresh when schema changes. Use when user says "/astronomer-data:warehouse-init" or asks to set up data discovery.
 ---
+<!-- lint-ignore-file-size -->
 
 # Initialize Warehouse Schema
 

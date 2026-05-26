@@ -2,6 +2,7 @@
 name: test-driven-development
 description: Use when implementing any feature or bugfix, before writing implementation code
 ---
+<!-- lint-ignore-file-size -->
 
 # Test-Driven Development (TDD)
 

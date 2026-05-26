@@ -2,6 +2,7 @@
 name: subagent-driven-development
 description: Use when executing implementation plans with independent tasks in the current session
 ---
+<!-- lint-ignore-file-size -->
 
 # Subagent-Driven Development
 

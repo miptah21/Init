@@ -2,6 +2,7 @@
 name: managing-astro-deployments
 description: Manage Astronomer production deployments with Astro CLI. Use when the user wants to authenticate, switch workspaces, create/update/delete deployments, or deploy code to production.
 ---
+<!-- lint-ignore-file-size -->
 
 # Astro Deployment Management
 

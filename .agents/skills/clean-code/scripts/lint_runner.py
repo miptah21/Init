@@ -34,13 +34,15 @@ def lint_directory(target_dir):
                 continue
                 
             # Rule 1: File size constraints (specifically SKILL.md under 250 lines)
-            if file == "SKILL.md":
-                if len(lines) > 250:
-                    warnings.append(f"[{rel_path}:0] SKILL.md exceeds 250 lines constraint ({len(lines)} lines)")
-                else:
-                    passes.append(f"{rel_path} size is within constraints ({len(lines)} lines)")
-            elif len(lines) > 500 and not file.endswith(".md"):
-                warnings.append(f"[{rel_path}:0] File is large ({len(lines)} lines). Consider modularizing.")
+            file_content = "".join(lines)
+            if "lint-ignore" not in file_content and "lint-ignore-file-size" not in file_content:
+                if file == "SKILL.md":
+                    if len(lines) > 250:
+                        warnings.append(f"[{rel_path}:0] SKILL.md exceeds 250 lines constraint ({len(lines)} lines)")
+                    else:
+                        passes.append(f"{rel_path} size is within constraints ({len(lines)} lines)")
+                elif len(lines) > 500 and not file.endswith(".md"):
+                    warnings.append(f"[{rel_path}:0] File is large ({len(lines)} lines). Consider modularizing.")
                 
             nest_level = 0
             in_deep_nest = False

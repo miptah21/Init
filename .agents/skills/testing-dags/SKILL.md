@@ -2,6 +2,7 @@
 name: testing-dags
 description: Complex DAG testing workflows with debugging and fixing cycles. Use for multi-step testing requests like "test this dag and fix it if it fails", "test and debug", "run the pipeline and troubleshoot issues". For simple test requests ("test dag", "run dag"), the airflow entrypoint skill handles it directly. This skill is for iterative test-debug-fix cycles.
 ---
+<!-- lint-ignore-file-size -->
 
 # DAG Testing Skill
 

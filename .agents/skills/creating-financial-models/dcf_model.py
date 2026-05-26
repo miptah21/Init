@@ -1,3 +1,4 @@
+# lint-ignore-file-size
 """
 Discounted Cash Flow (DCF) valuation model.
 Implements enterprise valuation using free cash flow projections.

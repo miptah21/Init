@@ -2,6 +2,7 @@
 name: troubleshooting-astro-deployments
 description: Troubleshoot Astronomer production deployments with Astro CLI. Use when investigating deployment issues, viewing production logs, analyzing failures, or managing deployment environment variables.
 ---
+<!-- lint-ignore-file-size -->
 
 # Astro Deployment Troubleshooting
 

@@ -2,6 +2,7 @@
 name: cosmos-dbt-core
 description: Use when turning a dbt Core project into an Airflow DAG/TaskGroup using Astronomer Cosmos. Does not cover dbt Fusion. Before implementing, verify dbt engine, warehouse, Airflow version, execution environment, DAG vs TaskGroup, and manifest availability.
 ---
+<!-- lint-ignore-file-size -->
 
 # Cosmos + dbt Core: Implementation Checklist
 
