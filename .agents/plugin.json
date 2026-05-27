@@ -24,7 +24,7 @@
     "devops",
     "observability"
   ],
-  "skills_count": 118,
+  "skills_count": 119,
   "skill_categories": {
     "dbt_snowflake": [
       "creating-dbt-models",
@@ -123,6 +123,7 @@
     "frontend_web": [
       "frontend-design",
       "web-design-guidelines",
+      "awesome-design-md",
       "react-patterns",
       "react-useeffect",
       "nextjs-best-practices",

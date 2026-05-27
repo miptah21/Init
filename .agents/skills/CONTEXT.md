@@ -26,6 +26,7 @@
 | **DCF** | Discounted Cash Flow — valuation method projecting future cash flows to present value |
 | **RTK** | Token compression utility prefix — reduces agent output by 60-90% |
 | **ADR** | Architecture Decision Record — captures \"why\" a structural choice was made |
+| **DESIGN.md** | Markdown design system specification placed in project root, acting as visual source of truth for AI styling |
 | **Vertical Slice** | Tracer bullet code slice that cuts through all layers (DB to UI) |
 | **Agent Brief** | Highly specified implementation ticket ready for an AFK agent to pick up |
 

@@ -1,12 +1,12 @@
 # 🧠 Agentic Engineering Skills Library
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Skills: 118](https://img.shields.io/badge/Skills-118-success.svg)](.agents/skills)
+[![Skills: 119](https://img.shields.io/badge/Skills-119-success.svg)](.agents/skills)
 [![Format: agentskills.io](https://img.shields.io/badge/Format-agentskills.io-yellow.svg)](https://agentskills.io)
 [![Compatibility: Universal](https://img.shields.io/badge/Compatibility-Universal_Agents-purple.svg)](#)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/miptah21/skills)
 
-A curated collection of **118 specialized AI agent skills** originally designed for [Antigravity](https://antigravity.dev), but fully compatible with **Claude Code, Cursor, Cline, Codex, Aider**, and any other agentic AI assistants. Skills cover the full engineering stack — from data engineering to frontend development to financial analysis.
+A curated collection of **119 specialized AI agent skills** originally designed for [Antigravity](https://antigravity.dev), but fully compatible with **Claude Code, Cursor, Cline, Codex, Aider**, and any other agentic AI assistants. Skills cover the full engineering stack — from data engineering to frontend development to financial analysis.
 
 ## 🏗️ Architecture
 
@@ -37,7 +37,7 @@ AGENTS.md                    ← Master routing (Intent Gate + Ambiguity Check)
 | **Finance** | 4 | DCF, variance analysis, reconciliation |
 | **Documents** | 10 | docx, pptx, pdf, xlsx, Excalidraw, canvas, edit-article |
 | **Engineering** | 25 | Python, CI/CD, git, security, refactoring, TDD, architecture, Karpathy Guidelines |
-| **Frontend/Web** | 12 | React, Next.js, Payload CMS, SEO, Playwright, performance, web audits |
+| **Frontend/Web** | 13 | React, Next.js, Payload CMS, SEO, Playwright, performance, web audits |
 | **Research & Productivity** | 10 | Deep research, writing pipeline, Obsidian, handoffs |
 | **Infrastructure** | 4 | FinOps, governance, RCA diagnostics |
 | **Superpowers** | 14 | Socratic brainstorming, plans execution, TDD, debugging, worktrees, code reviews, subagents |

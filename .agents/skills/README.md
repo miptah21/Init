@@ -127,6 +127,7 @@
 |-------|-----------------|
 | [frontend-design](frontend-design/SKILL.md) | Web components, pages, production-grade UI |
 | [web-design-guidelines](web-design-guidelines/SKILL.md) | UI review, modern design guidelines, layouts |
+| [awesome-design-md](awesome-design-md/SKILL.md) | "awesome-design-md", "DESIGN.md", design system, visual source of truth, Stripe/Linear/Vercel/Notion design |
 | [react-patterns](react-patterns/SKILL.md) | React hooks, composition, performance, TypeScript |
 | [react-useeffect](react-useeffect/SKILL.md) | useEffect best practices, when NOT to use Effect |
 | [nextjs-best-practices](nextjs-best-practices/SKILL.md) | Next.js App Router, Server Components, data fetching |

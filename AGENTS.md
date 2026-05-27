@@ -1,7 +1,7 @@
 # Antigravity AGENTS.md
 
 ## Project Overview
-This repository is a comprehensive **Agentic Engineering Skills Library** — a curated collection of 118 specialized AI agent skills compatible with modern AI coding assistants (Antigravity, Claude Code, Cursor, Cline, Codex, etc.). Skills cover the full engineering stack: data engineering (dbt, Airflow, Snowflake), frontend (React, Next.js), financial analysis, document generation, DevOps, and more.
+This repository is a comprehensive **Agentic Engineering Skills Library** — a curated collection of 119 specialized AI agent skills compatible with modern AI coding assistants (Antigravity, Claude Code, Cursor, Cline, Codex, etc.). Skills cover the full engineering stack: data engineering (dbt, Airflow, Snowflake), frontend (React, Next.js), financial analysis, document generation, DevOps, and more.
 
 ## Core Agent Behavior & Interaction
 - **Progressive Disclosure:** Do not assume context. When interacting with this repository, always rely on the specialized skills stored in `.agents/skills/`. Read the `SKILL.md` of the relevant skill before executing complex tasks.
@@ -97,7 +97,7 @@ When asked to perform a task, match it to the right category:
 - **Finance** → `analyzing-financial-statements`, `creating-financial-models`, `variance-analysis`, `reconciliation`
 - **Documents** → `docx`, `pptx`, `pdf`, `xlsx`, `excalidraw-diagram-generator`, `canvas-design`, `algorithmic-art`, `image-manipulation-image-magick`, `prd`, `edit-article`
 - **Engineering** → `python-expert`, `clean-code`, `refactor`, `ci-cd-pipeline-builder`, `git-workflow`, `pr-review-expert`, `tech-debt-tracker`, `dependency-auditor`, `security-auditor`, `performance-profiler`, `uv-package-manager`, `worktree-manager`, `database-design`, `improve-codebase-architecture`, `tdd`, `diagnose`, `prototype`, `to-issues`, `setup-pre-commit`, `caveman`, `triage`, `zoom-out`, `git-guardrails-claude-code`, `grill-with-docs`, `karpathy-guidelines`
-- **Frontend/Web** → `frontend-design`, `web-design-guidelines`, `react-patterns`, `react-useeffect`, `nextjs-best-practices`, `seo-optimizer`, `payload`, `playwright`, `webapp-testing`, `chrome-devtools`, `frontend-performance`, `web-quality-audit`
+- **Frontend/Web** → `frontend-design`, `web-design-guidelines`, `awesome-design-md`, `react-patterns`, `react-useeffect`, `nextjs-best-practices`, `seo-optimizer`, `payload`, `playwright`, `webapp-testing`, `chrome-devtools`, `frontend-performance`, `web-quality-audit`
 - **Research & Productivity** → `deep-research`, `agentic-eval`, `skill-writer`, `ag-md-improver`, `grill-me`, `handoff`, `writing-fragments`, `writing-shape`, `writing-beats`, `obsidian-vault`
 - **Infrastructure** → `cloud-finops`, `pipeline-orchestration`, `data-governance`, `rca-diagnostics`
 - **Superpowers** → `using-superpowers`, `brainstorming`, `using-git-worktrees`, `writing-plans`, `executing-plans`, `dispatching-parallel-agents`, `test-driven-development`, `systematic-debugging`, `verification-before-completion`, `requesting-code-review`, `receiving-code-review`, `finishing-a-development-branch`, `subagent-driven-development`, `writing-skills`
